@@ -111,14 +111,37 @@ h1{
 
 /* BUTTON */
 .btn{
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
   text-decoration:none;
-  background:linear-gradient(135deg,#D4AF37,#F9E076);
-  color:#000;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff;
   padding:16px;
   border-radius:40px;
   font-weight:900;
   font-size:16px;
+
+  box-shadow:0 0 10px rgba(37,211,102,0.6);
+  animation:glowPulse 1.5s infinite;
+}
+
+/* Smooth glowing animation */
+@keyframes glowPulse{
+  0%{
+    box-shadow:0 0 8px rgba(37,211,102,0.5);
+    transform:scale(1);
+  }
+  50%{
+    box-shadow:0 0 20px rgba(37,211,102,1);
+    transform:scale(1.05);
+  }
+  100%{
+    box-shadow:0 0 8px rgba(37,211,102,0.5);
+    transform:scale(1);
+  }
 }
 
 /* FEATURES BOX */
@@ -215,7 +238,13 @@ setInterval(()=>{
 <div class="box red">RED</div>
 </div>
 
-<a href="https://t.me/+pt_VfwPkkukyZWZl" class="btn">JOIN TELEGRAM FREE</a>
+<a href="https://t.me/+pt_VfwPkkukyZWZl" class="btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.857 10.146l-.195 2.748c.279 0 .4-.12.545-.264l1.31-1.248 2.717 1.987c.498.275.852.13.986-.462l1.79-8.387c.166-.77-.278-1.07-.764-.89L1.167 7.107c-.75.294-.738.71-.127.898l3.24 1.01 7.516-4.74c.354-.215.677-.096.412.12"/>
+  </svg>
+  JOIN TELEGRAM FREE
+</a>
+
 
 <div class="features">
 <div> ⭐ 100% Winning Sureshot</div>
